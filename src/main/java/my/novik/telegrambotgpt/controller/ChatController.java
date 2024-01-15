@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 @RestController
+@Deprecated
 public class ChatController {
 
     @Qualifier("openAIRestTemplate")
@@ -37,11 +38,4 @@ public class ChatController {
 
         return chatResponse.getChoices().get(0).getMessage().getContent();
     }
-
-    @GetMapping("/test")
-    public ChatRequest test(@RequestParam String prompt) {
-        ChatRequest chatRequest = new ChatRequest(model, prompt);
-        return chatRequest;
-    }
-
 }

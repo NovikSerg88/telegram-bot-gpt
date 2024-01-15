@@ -11,3 +11,5 @@ Model v3.5, application property
 openai.model=gpt-3.5-turbo
 
 Code for calling OpenAI API is based on the following Baeldung article: https://www.baeldung.com/spring-boot-chatgpt-api-openai
+
+Telegram API Java library is https://github.com/pengrad/java-telegram-bot-api

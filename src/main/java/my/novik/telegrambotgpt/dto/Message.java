@@ -9,6 +9,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Message {
 
-    private String role;
+    private String role; //the role of the messages author
     private String content;
 }

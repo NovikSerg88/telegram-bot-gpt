@@ -12,10 +12,10 @@ import java.util.List;
 @NoArgsConstructor
 public class ChatRequest {
 
-    private String model;
-    private List<Message> messages;
-    private int n;
-    private double temperature;
+    private String model; // ID of the model to use
+    private List<Message> messages; // a list of messages comprising to the conversation so far
+    private int n; //how many chat completion choices to generate for each input message.
+    private double temperature; //what sampling temperature to use, between 0 and 2.
 
 
     public ChatRequest(String model, String prompt) {
