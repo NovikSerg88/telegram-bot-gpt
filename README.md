@@ -1,15 +1,15 @@
-telegram-bot-gpt
+## H5 telegram-bot-gpt  
 
-The purpose of the ChatGPT Telegram Bot is to connect Telegram users with ChatGPT through OpenAI API
+**The purpose of the ChatGPT Telegram Bot is to connect Telegram users with ChatGPT through OpenAI API**  
 
-OpenAI API v1, application property
+OpenAI API v1, application property  
 
-openai.api.url=https://api.proxyapi.ru/openai/v1/chat/completions
+openai.api.url=https://api.proxyapi.ru/openai/v1/chat/completions  
 
-Model v3.5, application property
+Model v3.5, application property  
 
-openai.model=gpt-3.5-turbo
+openai.model=gpt-3.5-turbo  
 
-Code for calling OpenAI API is based on the following Baeldung article: https://www.baeldung.com/spring-boot-chatgpt-api-openai
+Code for calling OpenAI API is based on the following Baeldung article: https://www.baeldung.com/spring-boot-chatgpt-api-openai  
 
-Telegram API Java library is https://github.com/pengrad/java-telegram-bot-api
+Telegram API Java library is https://github.com/pengrad/java-telegram-bot-api  

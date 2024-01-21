@@ -43,6 +43,9 @@ public class TelegramBotUpdateListener implements UpdatesListener {
     @Value("${openai.api.url}")
     private String apiUrl;
 
+    @Value("${telegram.bot.token}")
+    private String token;
+
     @Value("${psb.token}")
     private String psb;
 
@@ -115,9 +118,9 @@ public class TelegramBotUpdateListener implements UpdatesListener {
             sendMessage(chatId, Messages.START_MESSAGE.text);
         } else if (updateType == UpdateType.COMMAND && update.message().text().equalsIgnoreCase(Commands.PAY.getCommand())) {
             sendMenu(chatId, update.message().messageId(), "Выберите способ оплаты:", Buttons.YOO_KASSA, Buttons.PSB);
-        } else if (updateType == UpdateType.CALLBACK_QUERY && update.callbackQuery().data().equalsIgnoreCase("psb")) {
+        } else if (updateType == UpdateType.CALLBACK_QUERY && update.callbackQuery().data().equalsIgnoreCase("psb")){
             sendInvoice(chatId, psb);
-        } else if (updateType == UpdateType.CALLBACK_QUERY && update.callbackQuery().data().equalsIgnoreCase("yooKassa")) {
+        } else if (updateType == UpdateType.CALLBACK_QUERY && update.callbackQuery().data().equalsIgnoreCase("yooKassa")){
             sendInvoice(chatId, yooKassa);
         }
     }
